@@ -3,638 +3,575 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Shatina Press-on Nails｜莎緹娜穿戴甲</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;
-background:#fffaf8;
-color:#2c2c2c;
-line-height:1.7;
-overflow-x:hidden;
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+  background:#fff8f6;
+  color:#3a2d2d;
+  line-height:1.7;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+  text-decoration:none;
+  color:inherit;
 }
 
 img{
-display:block;
-max-width:100%;
+  width:100%;
+  display:block;
 }
 
-/* ===================== */
-/* HEADER */
-/* ===================== */
+:root{
+  --pink:#c98592;
+  --soft:#fff0ef;
+  --deep:#6b4247;
+  --text:#3a2d2d;
+  --muted:#8c7777;
+}
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:999;
-background:rgba(255,255,255,.82);
-backdrop-filter:blur(16px);
-border-bottom:1px solid rgba(241,226,228,.8);
+/* HEADER */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,250,248,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(220,180,185,.25);
 }
 
 .nav{
-max-width:1320px;
-margin:auto;
-padding:14px 28px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+  max-width:1180px;
+  margin:auto;
+  padding:16px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .brand{
-display:flex;
-align-items:center;
-gap:14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
 .brand img{
-width:52px;
-height:52px;
-object-fit:cover;
-border-radius:16px;
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  border-radius:18px;
 }
 
-.brand-text h1{
-font-size:21px;
-font-weight:700;
-letter-spacing:.4px;
+.brand h1{
+  font-size:22px;
+  letter-spacing:.5px;
 }
 
-.brand-text p{
-font-size:12px;
-color:#999;
-margin-top:2px;
+.brand p{
+  font-size:13px;
+  color:var(--muted);
 }
 
 .menu{
-display:flex;
-gap:30px;
-}
-
-.menu a{
-font-size:15px;
-color:#444;
-transition:.25s;
+  display:flex;
+  gap:28px;
+  font-size:15px;
+  color:#6b5555;
 }
 
 .menu a:hover{
-color:#c88695;
+  color:var(--pink);
 }
 
-/* ===================== */
-/* FULLSCREEN HERO */
-/* ===================== */
+.nav-line{
+  background:var(--pink);
+  color:white;
+  padding:11px 22px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+/* HERO BANNER */
 
 .hero{
-position:relative;
-height:100vh;
-overflow:hidden;
+  width:100%;
+  background:#fff;
 }
 
-.hero-bg{
-position:absolute;
-inset:0;
-
-background:
-linear-gradient(rgba(255,248,248,.46),rgba(255,248,248,.66)),
-url("A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png");
-
-background-size:cover;
-background-position:center;
-
-transform:scale(1.03);
+.hero img{
+  width:100%;
+  height:auto;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
+/* FEATURE BAR */
 
-height:100%;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-
-text-align:center;
-
-padding:120px 24px 80px;
+.features{
+  max-width:1080px;
+  margin:-48px auto 70px;
+  position:relative;
+  z-index:5;
+  padding:0 20px;
 }
 
-.hero-logo{
-width:150px;
-margin-bottom:28px;
-filter:drop-shadow(0 8px 24px rgba(0,0,0,.08));
+.feature-box{
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(14px);
+  border-radius:28px;
+  box-shadow:0 20px 50px rgba(166,105,115,.16);
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  overflow:hidden;
 }
 
-.hero small{
-display:inline-block;
-font-size:13px;
-letter-spacing:3px;
-font-weight:700;
-color:#c88695;
-margin-bottom:20px;
+.feature-item{
+  padding:28px 20px;
+  text-align:center;
+  border-right:1px solid #f1dada;
 }
 
-.hero h2{
-font-size:84px;
-line-height:1;
-font-weight:800;
-letter-spacing:-2px;
-margin-bottom:24px;
+.feature-item:last-child{
+  border-right:none;
 }
 
-.hero h2 span{
-color:#c88695;
+.feature-icon{
+  font-size:30px;
+  color:var(--pink);
+  margin-bottom:10px;
 }
 
-.hero p{
-max-width:760px;
-font-size:20px;
-color:#5f5f5f;
-margin-bottom:40px;
+.feature-item h3{
+  font-size:17px;
+  margin-bottom:6px;
 }
 
-.hero-buttons{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-justify-content:center;
+.feature-item p{
+  font-size:13px;
+  color:var(--muted);
 }
 
-.btn{
-padding:16px 30px;
-border-radius:999px;
-font-size:15px;
-font-weight:700;
-transition:.25s;
-}
-
-.btn-main{
-background:#c88695;
-color:white;
-box-shadow:0 14px 32px rgba(200,134,149,.28);
-}
-
-.btn-main:hover{
-transform:translateY(-2px);
-}
-
-.btn-line{
-background:#06C755;
-color:white;
-}
-
-/* ===================== */
 /* GENERAL */
-/* ===================== */
 
 section{
-padding:110px 24px;
+  padding:78px 22px;
 }
 
 .container{
-max-width:1320px;
-margin:auto;
+  max-width:1180px;
+  margin:auto;
 }
 
 .section-title{
-text-align:center;
-margin-bottom:62px;
+  text-align:center;
+  margin-bottom:42px;
 }
 
 .section-title small{
-display:block;
-font-size:13px;
-letter-spacing:2px;
-font-weight:700;
-color:#c88695;
-margin-bottom:14px;
+  color:var(--pink);
+  letter-spacing:3px;
+  font-weight:800;
+  font-size:12px;
 }
 
-.section-title h3{
-font-size:48px;
-font-weight:800;
-margin-bottom:12px;
-letter-spacing:-1px;
+.section-title h2{
+  font-size:38px;
+  color:var(--deep);
+  margin:8px 0;
+  letter-spacing:1px;
 }
 
 .section-title p{
-max-width:760px;
-margin:auto;
-color:#777;
-font-size:16px;
+  color:var(--muted);
+  max-width:680px;
+  margin:auto;
 }
 
-/* ===================== */
 /* ABOUT */
-/* ===================== */
 
 .about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:center;
 }
 
 .about-card{
-background:white;
-border-radius:36px;
-padding:46px;
-box-shadow:0 12px 34px rgba(0,0,0,.06);
+  background:white;
+  border-radius:30px;
+  padding:38px;
+  box-shadow:0 14px 38px rgba(166,105,115,.08);
 }
 
-.about-card h4{
-font-size:36px;
-margin-bottom:20px;
+.about-card h3{
+  font-size:30px;
+  color:var(--deep);
+  margin-bottom:16px;
 }
 
 .about-card p{
-color:#666;
-margin-bottom:24px;
-font-size:16px;
+  color:#6f5c5c;
+  margin-bottom:18px;
 }
 
 .about-list{
-list-style:none;
+  list-style:none;
 }
 
 .about-list li{
-margin:14px 0;
-padding-left:28px;
-position:relative;
-color:#555;
+  margin:13px 0;
+  padding-left:28px;
+  position:relative;
+  color:#5d4b4b;
 }
 
 .about-list li:before{
-content:"✦";
-position:absolute;
-left:0;
-color:#c88695;
-font-weight:bold;
+  content:"✦";
+  position:absolute;
+  left:0;
+  color:var(--pink);
 }
 
-.about-image img{
-border-radius:36px;
-box-shadow:0 14px 40px rgba(0,0,0,.08);
+.about-img img{
+  border-radius:30px;
+  box-shadow:0 18px 45px rgba(166,105,115,.12);
 }
 
-/* ===================== */
 /* COLLECTION */
-/* ===================== */
 
 .collection-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:24px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
 }
 
-.collection{
-position:relative;
-overflow:hidden;
-border-radius:32px;
-background:white;
-box-shadow:0 10px 28px rgba(0,0,0,.06);
+.collection-card{
+  background:white;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 12px 32px rgba(166,105,115,.09);
+  transition:.25s;
 }
 
-.collection img{
-height:480px;
-width:100%;
-object-fit:cover;
-transition:.45s;
+.collection-card:hover{
+  transform:translateY(-5px);
 }
 
-.collection:hover img{
-transform:scale(1.05);
+.collection-card img{
+  height:250px;
+  object-fit:cover;
 }
 
-.collection-text{
-position:absolute;
-left:0;
-bottom:0;
-width:100%;
-padding:28px;
-background:linear-gradient(transparent,rgba(0,0,0,.72));
-color:white;
+.collection-info{
+  padding:18px;
 }
 
-.collection-text h4{
-font-size:26px;
-margin-bottom:6px;
+.collection-info h3{
+  font-size:19px;
+  color:var(--deep);
+  margin-bottom:4px;
 }
 
-.collection-text p{
-font-size:14px;
-opacity:.9;
+.collection-info p{
+  font-size:14px;
+  color:var(--muted);
 }
 
-/* ===================== */
-/* BEST SELLER */
-/* ===================== */
+/* BUTTON CENTER */
 
-.product-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+.center-btn{
+  text-align:center;
+  margin-top:34px;
 }
 
-.product{
-background:white;
-border-radius:32px;
-overflow:hidden;
-box-shadow:0 12px 32px rgba(0,0,0,.06);
-transition:.3s;
+.btn-soft{
+  display:inline-block;
+  background:var(--pink);
+  color:white;
+  padding:13px 36px;
+  border-radius:999px;
+  font-weight:700;
+  box-shadow:0 12px 26px rgba(201,133,146,.25);
 }
 
-.product:hover{
-transform:translateY(-6px);
+/* BEST */
+
+.best-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
 }
 
-.product img{
-width:100%;
-height:400px;
-object-fit:cover;
+.product-card{
+  background:white;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 12px 32px rgba(166,105,115,.09);
 }
 
-.product-body{
-padding:26px;
+.product-card img{
+  height:330px;
+  object-fit:cover;
+}
+
+.product-info{
+  padding:22px;
 }
 
 .badge{
-display:inline-block;
-padding:6px 14px;
-border-radius:999px;
-background:#ffe5ea;
-color:#c88695;
-font-size:12px;
-font-weight:700;
-margin-bottom:14px;
+  display:inline-block;
+  background:#f6d9de;
+  color:var(--deep);
+  padding:5px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:10px;
 }
 
-.product h4{
-font-size:26px;
-margin-bottom:10px;
+.product-info h3{
+  font-size:22px;
+  color:var(--deep);
+  margin-bottom:6px;
 }
 
-.product p{
-color:#666;
-font-size:15px;
+.product-info p{
+  color:var(--muted);
+  font-size:14px;
 }
 
-/* ===================== */
-/* REVIEW */
-/* ===================== */
+/* REVIEWS */
 
-.review-wrap{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:28px;
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
 }
 
 .review-card{
-background:white;
-border-radius:32px;
-overflow:hidden;
-box-shadow:0 10px 28px rgba(0,0,0,.06);
+  background:white;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 12px 32px rgba(166,105,115,.09);
 }
 
 .review-card img{
-height:420px;
-width:100%;
-object-fit:cover;
+  height:340px;
+  object-fit:cover;
+  background:#fff0ef;
 }
 
-.review-body{
-padding:24px;
+.review-info{
+  padding:20px;
 }
 
-.review-body h4{
-font-size:22px;
-margin-bottom:10px;
+.review-info h3{
+  color:var(--deep);
+  font-size:20px;
+  margin-bottom:6px;
 }
 
-.review-body p{
-color:#666;
-font-size:15px;
+.review-info p{
+  color:var(--muted);
+  font-size:14px;
 }
 
-/* ===================== */
 /* PROCESS */
-/* ===================== */
 
-.process{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:18px;
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
 }
 
 .step{
-background:white;
-border-radius:30px;
-padding:30px;
-text-align:center;
-box-shadow:0 10px 28px rgba(0,0,0,.05);
+  background:white;
+  border-radius:24px;
+  padding:24px 18px;
+  text-align:center;
+  box-shadow:0 10px 28px rgba(166,105,115,.07);
 }
 
-.step-number{
-width:46px;
-height:46px;
-border-radius:50%;
-background:#c88695;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto auto 16px;
-font-weight:700;
+.step-num{
+  width:42px;
+  height:42px;
+  background:var(--pink);
+  color:white;
+  border-radius:50%;
+  margin:0 auto 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
 }
 
-.step h4{
-margin-bottom:10px;
-font-size:20px;
+.step h3{
+  color:var(--deep);
+  font-size:18px;
+  margin-bottom:6px;
 }
 
 .step p{
-color:#777;
-font-size:14px;
+  color:var(--muted);
+  font-size:14px;
 }
 
-/* ===================== */
 /* CTA */
-/* ===================== */
 
 .cta{
-background:
-linear-gradient(135deg,#ffe4ea,#fff9f9);
-
-border-radius:42px;
-padding:72px 28px;
-text-align:center;
+  background:linear-gradient(135deg,#ffe8ec,#fffaf8);
+  border-radius:34px;
+  padding:54px 24px;
+  text-align:center;
+  box-shadow:0 14px 40px rgba(166,105,115,.08);
 }
 
-.cta h3{
-font-size:52px;
-margin-bottom:14px;
-letter-spacing:-1px;
+.cta h2{
+  font-size:34px;
+  color:var(--deep);
+  margin-bottom:10px;
 }
 
 .cta p{
-max-width:760px;
-margin:auto;
-color:#666;
-font-size:17px;
-margin-bottom:30px;
+  color:var(--muted);
+  margin-bottom:24px;
 }
 
-/* ===================== */
 /* FOOTER */
-/* ===================== */
 
 footer{
-background:white;
-border-top:1px solid #f1e2e4;
-padding:42px 24px;
-text-align:center;
-color:#888;
-font-size:14px;
+  text-align:center;
+  padding:38px 20px 110px;
+  color:#9a8585;
+  font-size:14px;
 }
 
-/* ===================== */
 /* FLOAT BAR */
-/* ===================== */
 
 .float-bar{
-position:fixed;
-bottom:18px;
-left:50%;
-transform:translateX(-50%);
-background:white;
-padding:10px;
-border-radius:999px;
-display:flex;
-gap:10px;
-box-shadow:0 14px 36px rgba(0,0,0,.14);
-z-index:999;
+  position:fixed;
+  left:50%;
+  bottom:18px;
+  transform:translateX(-50%);
+  background:white;
+  padding:10px;
+  border-radius:999px;
+  display:flex;
+  gap:10px;
+  box-shadow:0 14px 38px rgba(0,0,0,.14);
+  z-index:1000;
 }
 
 .float-bar a{
-padding:14px 22px;
-border-radius:999px;
-font-size:14px;
-font-weight:700;
-color:white;
+  padding:14px 34px;
+  border-radius:999px;
+  color:white;
+  font-weight:800;
+  font-size:14px;
 }
 
 .float-line{
-background:#06C755;
+  background:#06C755;
 }
 
 .float-shop{
-background:#ee4d2d;
+  background:#ee4d2d;
 }
 
 .float-ig{
-background:#111;
+  background:#111;
 }
 
-/* ===================== */
 /* MOBILE */
-/* ===================== */
 
-@media(max-width:1024px){
+@media(max-width:900px){
+  .menu,
+  .nav-line{
+    display:none;
+  }
 
-.menu{
-display:none;
+  .features{
+    margin:-28px auto 48px;
+  }
+
+  .feature-box{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .feature-item{
+    border-right:none;
+    border-bottom:1px solid #f1dada;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .collection-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .best-grid,
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+  .process-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
-.about{
-grid-template-columns:1fr;
-}
+@media(max-width:600px){
+  .brand img{
+    width:52px;
+    height:52px;
+  }
 
-.collection-grid{
-grid-template-columns:repeat(2,1fr);
-}
+  .brand h1{
+    font-size:21px;
+  }
 
-.product-grid{
-grid-template-columns:1fr;
-}
+  .nav{
+    padding:14px 18px;
+  }
 
-.review-wrap{
-grid-template-columns:1fr;
-}
+  .feature-box{
+    grid-template-columns:1fr;
+  }
 
-.process{
-grid-template-columns:repeat(2,1fr);
-}
+  .collection-grid,
+  .process-grid{
+    grid-template-columns:1fr;
+  }
 
-.hero h2{
-font-size:58px;
-}
+  .section-title h2{
+    font-size:31px;
+  }
 
-}
+  section{
+    padding:62px 18px;
+  }
 
-@media(max-width:640px){
+  .float-bar{
+    width:92%;
+    justify-content:center;
+  }
 
-.hero{
-height:auto;
-min-height:100vh;
-}
-
-.hero-content{
-padding-top:140px;
-}
-
-.hero h2{
-font-size:42px;
-}
-
-.hero p{
-font-size:17px;
-}
-
-.section-title h3{
-font-size:36px;
-}
-
-.collection-grid{
-grid-template-columns:1fr;
-}
-
-.process{
-grid-template-columns:1fr;
-}
-
-.float-bar{
-width:92%;
-justify-content:center;
-}
-
-.float-bar a{
-flex:1;
-text-align:center;
-padding:14px 10px;
-font-size:13px;
-}
-
+  .float-bar a{
+    flex:1;
+    text-align:center;
+    padding:14px 8px;
+  }
 }
 
 </style>
@@ -642,583 +579,275 @@ font-size:13px;
 
 <body>
 
-<!-- HEADER -->
+<header class="header">
+  <nav class="nav">
+    <div class="brand">
+      <img src="IMG_7629.png" alt="Shatina Logo">
+      <div>
+        <h1>Shatina</h1>
+        <p>Press-on Nails</p>
+      </div>
+    </div>
 
-<header>
+    <div class="menu">
+      <a href="#about">關於</a>
+      <a href="#collection">作品分類</a>
+      <a href="#best">爆款排行</a>
+      <a href="#review">客人回饋</a>
+      <a href="#contact">關於我們</a>
+    </div>
 
-<div class="nav">
-
-<div class="brand">
-
-<img src="IMG_7629.png">
-
-<div class="brand-text">
-<h1>Shatina</h1>
-<p>Press-on Nails</p>
-</div>
-
-</div>
-
-<div class="menu">
-<a href="#about">關於</a>
-<a href="#collection">作品分類</a>
-<a href="#best">爆款排行</a>
-<a href="#review">客人回饋</a>
-<a href="#contact">聯絡</a>
-</div>
-
-</div>
-
+    <a class="nav-line" href="https://line.me/ti/p/~64130184" target="_blank">
+      LINE 詢問
+    </a>
+  </nav>
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
-
-<div class="hero-bg"></div>
-
-<div class="hero-content">
-
-<img src="IMG_7629.png" class="hero-logo">
-
-<small>SHATINA PRESS-ON NAILS</small>
-
-<h2>
-不用花三小時做指甲<br>
-<span>也能快速擁有精緻感</span>
-</h2>
-
-<p>
-Shatina 專注於韓系、氣質、甜美與暗黑風格穿戴甲。
-適合日常、約會、拍照、市集與臨時活動。
-</p>
-
-<div class="hero-buttons">
-
-<a href="#best" class="btn btn-main">
-查看熱門款式
-</a>
-
-<a href="https://line.me/ti/p/~64130184"
-class="btn btn-line"
-target="_blank">
-LINE 詢問
-</a>
-
-</div>
-
-</div>
-
+  <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png" alt="Shatina Banner">
 </section>
 
-<!-- ABOUT -->
+<div class="features">
+  <div class="feature-box">
+    <div class="feature-item">
+      <div class="feature-icon">◇</div>
+      <h3>精品手工設計</h3>
+      <p>高質感設計，細節滿滿</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">✦</div>
+      <h3>舒適服貼</h3>
+      <p>輕薄自然，久戴不悶</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">◷</div>
+      <h3>快速變美</h3>
+      <p>不用花三小時，貼上即出門</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">♡</div>
+      <h3>可重複使用</h3>
+      <p>妥善保存，多次配戴</p>
+    </div>
+  </div>
+</div>
 
 <section id="about">
+  <div class="container">
+    <div class="section-title">
+      <small>ABOUT SHATINA</small>
+      <h2>關於莎緹娜</h2>
+      <p>不是低價量販，而是更有質感、更適合日常生活的手工穿戴甲品牌。</p>
+    </div>
 
-<div class="container">
+    <div class="about">
+      <div class="about-card">
+        <h3>台灣手作穿戴甲品牌</h3>
+        <p>
+          Shatina 希望讓女生不用長時間跑美甲店，也能快速擁有漂亮、自然、有精緻感的指尖。
+        </p>
 
-<div class="section-title">
+        <ul class="about-list">
+          <li>韓系 / 氣質 / 暗黑 / 甜美風格</li>
+          <li>XS / S / M / L 尺寸</li>
+          <li>LINE 協助挑款與尺寸</li>
+          <li>適合上班、約會、拍照與日常穿搭</li>
+        </ul>
+      </div>
 
-<small>ABOUT SHATINA</small>
-
-<h3>
-關於莎緹娜
-</h3>
-
-<p>
-不是低價量販，而是更有質感、更適合日常生活的穿戴甲品牌。
-</p>
-
-</div>
-
-<div class="about">
-
-<div class="about-card">
-
-<h4>
-台灣手作穿戴甲品牌
-</h4>
-
-<p>
-Shatina 希望讓更多女生不用花長時間跑美甲店，
-也能快速擁有漂亮、自然、有精緻感的指尖。
-</p>
-
-<ul class="about-list">
-
-<li>韓系 / 氣質 / 暗黑 / 甜美風格</li>
-<li>XS / S / M / L 尺寸</li>
-<li>LINE 協助挑款與尺寸</li>
-<li>適合上班、約會、拍照與日常穿搭</li>
-
-</ul>
-
-</div>
-
-<div class="about-image">
-
-<img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
-
-</div>
-
-</div>
-
-</div>
-
+      <div class="about-img">
+        <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png" alt="About Shatina">
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- COLLECTION -->
 
 <section id="collection">
+  <div class="container">
+    <div class="section-title">
+      <small>COLLECTION</small>
+      <h2>作品分類</h2>
+      <p>依照不同風格找到最適合自己的款式。</p>
+    </div>
 
-<div class="container">
+    <div class="collection-grid">
+      <div class="collection-card">
+        <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
+        <div class="collection-info">
+          <h3>韓系裸粉</h3>
+          <p>自然、氣質、日常百搭</p>
+        </div>
+      </div>
 
-<div class="section-title">
+      <div class="collection-card">
+        <img src="IMG_7626.jpeg">
+        <div class="collection-info">
+          <h3>暗黑個性</h3>
+          <p>十字架、黑銀、酷感設計</p>
+        </div>
+      </div>
 
-<small>COLLECTIONS</small>
+      <div class="collection-card">
+        <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
+        <div class="collection-info">
+          <h3>甜美蝴蝶結</h3>
+          <p>少女感、約會、拍照必備</p>
+        </div>
+      </div>
 
-<h3>
-作品分類
-</h3>
+      <div class="collection-card">
+        <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
+        <div class="collection-info">
+          <h3>奶茶氣質款</h3>
+          <p>低調、百搭、溫柔氣質</p>
+        </div>
+      </div>
+    </div>
 
-<p>
-依照不同風格快速找到適合自己的款式。
-</p>
-
-</div>
-
-<div class="collection-grid">
-
-<div class="collection">
-
-<img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
-
-<div class="collection-text">
-
-<h4>韓系裸粉</h4>
-
-<p>
-自然、溫柔、日常百搭。
-</p>
-
-</div>
-
-</div>
-
-<div class="collection">
-
-<img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
-
-<div class="collection-text">
-
-<h4>暗黑個性</h4>
-
-<p>
-十字架、黑銀、酷感設計。
-</p>
-
-</div>
-
-</div>
-
-<div class="collection">
-
-<img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
-
-<div class="collection-text">
-
-<h4>甜美蝴蝶結</h4>
-
-<p>
-少女感、拍照感、約會風格。
-</p>
-
-</div>
-
-</div>
-
-<div class="collection">
-
-<img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
-
-<div class="collection-text">
-
-<h4>奶茶氣質款</h4>
-
-<p>
-乾淨、有質感、不誇張。
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+    <div class="center-btn">
+      <a href="#best" class="btn-soft">查看全部作品</a>
+    </div>
+  </div>
 </section>
-
-<!-- BEST -->
 
 <section id="best">
+  <div class="container">
+    <div class="section-title">
+      <small>BEST SELLERS</small>
+      <h2>爆款排行</h2>
+      <p>目前最受歡迎的熱門款式。</p>
+    </div>
 
-<div class="container">
+    <div class="best-grid">
+      <div class="product-card">
+        <img src="IMG_7626.jpeg">
+        <div class="product-info">
+          <span class="badge">TOP 1</span>
+          <h3>暗黑十字架系列</h3>
+          <p>個性、顯白、韓系酷感，適合黑色系與個性穿搭。</p>
+        </div>
+      </div>
 
-<div class="section-title">
+      <div class="product-card">
+        <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
+        <div class="product-info">
+          <span class="badge">TOP 2</span>
+          <h3>奶茶氣質系列</h3>
+          <p>低調、有質感，適合日常、上班與約會。</p>
+        </div>
+      </div>
 
-<small>BEST SELLERS</small>
-
-<h3>
-爆款排行
-</h3>
-
-<p>
-目前最受歡迎、最適合第一次入手的熱門款式。
-</p>
-
-</div>
-
-<div class="product-grid">
-
-<div class="product">
-
-<img src="IMG_7626.jpeg">
-
-<div class="product-body">
-
-<span class="badge">
-TOP 1
-</span>
-
-<h4>
-暗黑十字架系列
-</h4>
-
-<p>
-顯白、個性、韓系酷感。
-適合黑色系與個性穿搭。
-</p>
-
-</div>
-
-</div>
-
-<div class="product">
-
-<img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
-
-<div class="product-body">
-
-<span class="badge">
-TOP 2
-</span>
-
-<h4>
-奶茶氣質系列
-</h4>
-
-<p>
-低調、有質感，
-適合日常與上班。
-</p>
-
-</div>
-
-</div>
-
-<div class="product">
-
-<img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
-
-<div class="product-body">
-
-<span class="badge">
-TOP 3
-</span>
-
-<h4>
-粉嫩甜美系列
-</h4>
-
-<p>
-溫柔、少女感，
-適合約會與拍照。
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+      <div class="product-card">
+        <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
+        <div class="product-info">
+          <span class="badge">TOP 3</span>
+          <h3>粉嫩甜美系列</h3>
+          <p>溫柔少女感，適合約會、拍照與第一次入手。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- REVIEW -->
 
 <section id="review">
+  <div class="container">
+    <div class="section-title">
+      <small>REAL FEEDBACK</small>
+      <h2>客人真實回饋</h2>
+      <p>謝謝每一位女孩的喜愛與支持。</p>
+    </div>
 
-<div class="container">
+    <div class="review-grid">
+      <div class="review-card">
+        <img src="line1.jpg" alt="LINE 客人回饋 1">
+        <div class="review-info">
+          <h3>「超像做光療」</h3>
+          <p>第一次配戴也能很自然，拍照非常有精緻感。</p>
+        </div>
+      </div>
 
-<div class="section-title">
+      <div class="review-card">
+        <img src="line2.jpg" alt="LINE 客人回饋 2">
+        <div class="review-info">
+          <h3>「而且真的很牢」</h3>
+          <p>日常上班、約會、拍照都可以安心配戴。</p>
+        </div>
+      </div>
 
-<small>REAL CUSTOMER FEEDBACK</small>
-
-<h3>
-客人真實回饋
-</h3>
-
-<p>
-很多客人第一次配戴都會很驚訝，
-比想像中更自然、更牢固。
-</p>
-
-</div>
-
-<div class="review-wrap">
-
-<div class="review-card">
-
-<img src="line1.jpg">
-
-<div class="review-body">
-
-<span class="badge">
-REAL FEEDBACK
-</span>
-
-<h4>
-「超像做光療 🤍」
-</h4>
-
-<p>
-很多客人第一次配戴，
-都會覺得比想像中自然很多。
-</p>
-
-</div>
-
-</div>
-
-<div class="review-card">
-
-<img src="line2.jpg">
-
-<div class="review-body">
-
-<span class="badge">
-REAL FEEDBACK
-</span>
-
-<h4>
-「而且真的很牢！」
-</h4>
-
-<p>
-日常上班、拍照、約會都可以戴，
-正常生活不太容易掉。
-</p>
-
-</div>
-
-</div>
-
-<div class="review-card">
-
-<img src="line3.jpg">
-
-<div class="review-body">
-
-<span class="badge">
-REAL FEEDBACK
-</span>
-
-<h4>
-「第一次戴就愛上了」
-</h4>
-
-<p>
-適合不想花三小時做指甲，
-但又想快速有精緻感的人。
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+      <div class="review-card">
+        <img src="line3.jpg" alt="LINE 客人回饋 3">
+        <div class="review-info">
+          <h3>「第一次戴就愛上」</h3>
+          <p>不用花三小時做指甲，也能快速變漂亮。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- PROCESS -->
 
 <section>
+  <div class="container">
+    <div class="section-title">
+      <small>HOW TO ORDER</small>
+      <h2>購買流程</h2>
+      <p>第一次購買也很簡單。</p>
+    </div>
 
-<div class="container">
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>挑款式</h3>
+        <p>從作品集、LINE 群或 IG 挑選喜歡的款式。</p>
+      </div>
 
-<div class="section-title">
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>確認尺寸</h3>
+        <p>常見尺寸 XS / S / M / L，不確定可詢問。</p>
+      </div>
 
-<small>HOW TO ORDER</small>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>確認現貨</h3>
+        <p>透過 LINE 詢問目前是否有現貨。</p>
+      </div>
 
-<h3>
-購買流程
-</h3>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>完成下單</h3>
+        <p>可透過蝦皮或 LINE 完成購買。</p>
+      </div>
 
-<p>
-第一次購買也很簡單。
-</p>
-
-</div>
-
-<div class="process">
-
-<div class="step">
-
-<div class="step-number">1</div>
-
-<h4>挑款式</h4>
-
-<p>
-從作品集、IG、LINE 群挑選喜歡的款式。
-</p>
-
-</div>
-
-<div class="step">
-
-<div class="step-number">2</div>
-
-<h4>確認尺寸</h4>
-
-<p>
-常見尺寸 XS / S / M / L，不確定可詢問。
-</p>
-
-</div>
-
-<div class="step">
-
-<div class="step-number">3</div>
-
-<h4>確認現貨</h4>
-
-<p>
-透過 LINE 詢問目前是否有現貨。
-</p>
-
-</div>
-
-<div class="step">
-
-<div class="step-number">4</div>
-
-<h4>完成下單</h4>
-
-<p>
-可透過蝦皮或 LINE 完成購買。
-</p>
-
-</div>
-
-<div class="step">
-
-<div class="step-number">5</div>
-
-<h4>收到配戴</h4>
-
-<p>
-依照教學貼上即可完成美甲效果。
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+      <div class="step">
+        <div class="step-num">5</div>
+        <h3>收到配戴</h3>
+        <p>依照教學貼上，即可完成美甲效果。</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CTA -->
-
 <section id="contact">
-
-<div class="container">
-
-<div class="cta">
-
-<h3>
-找到適合自己的穿戴甲風格
-</h3>
-
-<p>
-加入 LINE 詢問尺寸與現貨，
-或直接到蝦皮查看熱門款式。
-</p>
-
-<div class="hero-buttons"
-style="justify-content:center;">
-
-<a href="https://line.me/ti/p/~64130184"
-class="btn btn-line"
-target="_blank">
-
-LINE 詢問
-
-</a>
-
-<a href="#best"
-class="btn btn-main">
-
-查看爆款
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div class="cta">
+      <h2>找到適合自己的穿戴甲風格</h2>
+      <p>加入 LINE 詢問尺寸與現貨，或直接到蝦皮查看熱門款式。</p>
+      <a class="btn-soft" href="https://line.me/ti/p/~64130184" target="_blank">LINE 詢問</a>
+    </div>
+  </div>
 </section>
 
 <footer>
-
-© 2026 Shatina Press-on Nails
-
+  © 2026 Shatina Press-on Nails All Rights Reserved.
 </footer>
 
-<!-- FLOAT BAR -->
-
 <div class="float-bar">
-
-<a href="https://line.me/ti/p/~64130184"
-class="float-line"
-target="_blank">
-
-LINE
-
-</a>
-
-<a href="https://tw.shp.ee/pP3mgWKm"
-class="float-shop"
-target="_blank">
-
-蝦皮
-
-</a>
-
-<a href="https://instagram.com/shatina_nail"
-class="float-ig"
-target="_blank">
-
-IG
-
-</a>
-
+  <a class="float-line" href="https://line.me/ti/p/~64130184" target="_blank">LINE</a>
+  <a class="float-shop" href="https://tw.shp.ee/pP3mgWKm" target="_blank">蝦皮</a>
+  <a class="float-ig" href="https://instagram.com/shatina_nail" target="_blank">IG</a>
 </div>
 
 </body>
