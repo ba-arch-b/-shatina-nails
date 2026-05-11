@@ -1,233 +1,539 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shatina Press-on Nails</title>
+<title>Shatina Press-on Nails｜莎緹娜穿戴甲</title>
 
 <style>
+*{box-sizing:border-box}
+
 body{
-margin:0;
-font-family:Arial;
-background:#fff7f8;
-color:#333;
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+  background:#fffaf9;
+  color:#2c2c2c;
+  line-height:1.7;
 }
 
-header{
-text-align:center;
-padding:40px 20px;
-background:white;
+a{text-decoration:none;color:inherit}
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #f1dfe1;
+  padding:12px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo{
-width:220px;
-max-width:80%;
+.nav img{height:44px}
+
+.nav-links{
+  display:flex;
+  gap:18px;
+  font-size:14px;
 }
 
-h1{
-font-size:36px;
-margin-top:20px;
+.hero{
+  padding:70px 6% 60px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+  background:linear-gradient(135deg,#fff,#ffe9ee);
 }
 
-.subtitle{
-color:#888;
-margin-top:10px;
+.hero h1{
+  font-size:46px;
+  line-height:1.2;
+  margin:0 0 18px;
 }
 
-.button-group{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:12px;
-flex-wrap:wrap;
+.hero p{
+  color:#666;
+  font-size:18px;
+  max-width:560px;
+}
+
+.hero-img{
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 18px 45px rgba(190,120,135,.25);
+}
+
+.hero-img img{
+  width:100%;
+  display:block;
+}
+
+.buttons{
+  margin-top:28px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
 .btn{
-padding:12px 22px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
+  padding:13px 24px;
+  border-radius:999px;
+  font-weight:700;
+  color:white;
 }
 
-.line{
-background:#06C755;
-color:white;
+.line{background:#06C755}
+.shopee{background:#ee4d2d}
+.ig{background:#111}
+.soft{background:#d88b9b}
+
+section{
+  padding:64px 6%;
+  max-width:1250px;
+  margin:auto;
 }
 
-.shopee{
-background:#ff5b00;
-color:white;
+.title{
+  text-align:center;
+  margin-bottom:34px;
 }
 
-.ig{
-background:black;
-color:white;
+.title h2{
+  font-size:32px;
+  margin:0;
 }
 
-.section{
-padding:40px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.section-title{
-font-size:28px;
-margin-bottom:20px;
-text-align:center;
+.title p{
+  color:#777;
+  margin-top:8px;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
 .card{
-background:white;
-border-radius:16px;
-overflow:hidden;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  background:white;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
 }
 
 .card img{
-width:100%;
-display:block;
+  width:100%;
+  height:310px;
+  object-fit:cover;
+  display:block;
+}
+
+.card-body{
+  padding:18px;
+}
+
+.tag{
+  display:inline-block;
+  font-size:12px;
+  background:#ffe3e9;
+  color:#bd6577;
+  padding:4px 10px;
+  border-radius:999px;
+  margin-bottom:8px;
+}
+
+.card h3{
+  margin:0 0 6px;
+  font-size:20px;
 }
 
 .card p{
-padding:12px;
-font-weight:bold;
-text-align:center;
+  margin:0;
+  color:#666;
+  font-size:14px;
+}
+
+.feature{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.feature-box{
+  background:white;
+  border-radius:22px;
+  padding:24px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.feature-box h3{
+  margin-top:0;
+  color:#c97586;
+}
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.step{
+  background:#fff;
+  border:1px solid #f1dfe1;
+  border-radius:22px;
+  padding:22px;
+}
+
+.num{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#d88b9b;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  margin-bottom:12px;
 }
 
 .review{
-background:white;
-padding:20px;
-border-radius:16px;
-margin-top:20px;
+  background:#fff;
+  border-radius:26px;
+  padding:26px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:28px;
+  align-items:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.review img{
+  width:100%;
+  border-radius:20px;
+}
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+.faq-item{
+  background:white;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:12px;
+  box-shadow:0 4px 14px rgba(0,0,0,.05);
+}
+
+.cta{
+  background:linear-gradient(135deg,#ffe3e9,#fff);
+  border-radius:32px;
+  text-align:center;
+  padding:46px 24px;
 }
 
 footer{
-text-align:center;
-padding:40px;
-color:#777;
+  text-align:center;
+  padding:36px 6%;
+  color:#888;
+  background:white;
+  border-top:1px solid #f1dfe1;
+}
+
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero p{margin:auto}
+
+  .buttons{justify-content:center}
+
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .feature{grid-template-columns:repeat(2,1fr)}
+  .process{grid-template-columns:repeat(2,1fr)}
+  .review{grid-template-columns:1fr}
+}
+
+@media(max-width:600px){
+  .nav-links{display:none}
+
+  .hero{
+    padding:46px 20px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  section{
+    padding:46px 18px;
+  }
+
+  .grid,
+  .feature,
+  .process{
+    grid-template-columns:1fr;
+  }
+
+  .card img{
+    height:auto;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-
-<img src="logo.png" class="logo">
-
-<h1>Shatina Press-on Nails</h1>
-
-<div class="subtitle">
-手工穿戴甲｜台灣手作設計｜現貨＋客製
+<div class="nav">
+  <img src="logo.png" alt="Shatina">
+  <div class="nav-links">
+    <a href="#best">爆款</a>
+    <a href="#gallery">作品集</a>
+    <a href="#order">購買流程</a>
+    <a href="#contact">聯絡</a>
+  </div>
 </div>
 
-<div class="button-group">
+<div class="hero">
+  <div>
+    <h1>不用跑美甲店，也能擁有精緻指尖。</h1>
+    <p>
+      Shatina Press-on Nails 莎緹娜穿戴甲，提供手工設計穿戴甲。
+      適合上班、約會、拍照、市集、派對與日常穿搭。
+      可快速配戴、可重複使用，也能依尺寸挑選適合款式。
+    </p>
 
-<a class="btn line"
-href="https://line.me/">
-LINE 聯絡
-</a>
+    <div class="buttons">
+      <a class="btn line" href="https://line.me/" target="_blank">LINE 詢問</a>
+      <a class="btn shopee" href="https://tw.shp.ee/pP3mgWKm" target="_blank">蝦皮下單</a>
+      <a class="btn ig" href="https://instagram.com/shatina_nail" target="_blank">Instagram</a>
+    </div>
+  </div>
 
-<a class="btn shopee"
-href="https://tw.shp.ee/pP3mgWKm">
-蝦皮下單
-</a>
-
-<a class="btn ig"
-href="https://instagram.com/">
-Instagram
-</a>
-
+  <div class="hero-img">
+    <img src="hero.jpg" alt="Shatina 市集展示">
+  </div>
 </div>
 
-</header>
+<section>
+  <div class="title">
+    <h2>為什麼選 Shatina？</h2>
+    <p>不是低價量販，而是有質感、有風格、適合日常使用的手作穿戴甲。</p>
+  </div>
 
-<section class="section">
-
-<div class="section-title">
-🔥 爆款排行
-</div>
-
-<div class="grid">
-
-<div class="card">
-<img src="1.jpg">
-<p>黑銀十字架系列</p>
-</div>
-
-<div class="card">
-<img src="2.jpg">
-<p>奶茶菱格系列</p>
-</div>
-
-<div class="card">
-<img src="3.jpg">
-<p>粉嫩星空系列</p>
-</div>
-
-<div class="card">
-<img src="4.jpg">
-<p>新年紅絲帶系列</p>
-</div>
-
-</div>
-
+  <div class="feature">
+    <div class="feature-box">
+      <h3>手工設計</h3>
+      <p>每款都有細節，不是普通大量感款式。</p>
+    </div>
+    <div class="feature-box">
+      <h3>快速變漂亮</h3>
+      <p>不用預約美甲店，臨時約會、拍照都能使用。</p>
+    </div>
+    <div class="feature-box">
+      <h3>可重複使用</h3>
+      <p>正確拆卸與保存，可再次配戴。</p>
+    </div>
+    <div class="feature-box">
+      <h3>LINE 協助挑選</h3>
+      <p>不確定尺寸或風格，可以直接詢問。</p>
+    </div>
+  </div>
 </section>
 
-<section class="section">
+<section id="best">
+  <div class="title">
+    <h2>🔥 爆款排行</h2>
+    <p>目前最受客人喜歡的款式。</p>
+  </div>
 
-<div class="section-title">
-✨ 作品集
-</div>
+  <div class="grid">
+    <div class="card">
+      <img src="1.jpg" alt="黑銀十字架">
+      <div class="card-body">
+        <span class="tag">Top 1</span>
+        <h3>黑銀十字架系列</h3>
+        <p>暗黑、顯白、個性穿搭首選。</p>
+      </div>
+    </div>
 
-<div class="grid">
+    <div class="card">
+      <img src="2.jpg" alt="奶茶菱格">
+      <div class="card-body">
+        <span class="tag">Top 2</span>
+        <h3>奶茶菱格系列</h3>
+        <p>氣質高級，適合日常與上班。</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="5.jpg">
-<p>韓系</p>
-</div>
-
-<div class="card">
-<img src="6.jpg">
-<p>甜妹</p>
-</div>
-
-<div class="card">
-<img src="7.jpg">
-<p>暗黑</p>
-</div>
-
-<div class="card">
-<img src="8.jpg">
-<p>日系</p>
-</div>
-
-</div>
-
+    <div class="card">
+      <img src="3.jpg" alt="粉嫩星空">
+      <div class="card-body">
+        <span class="tag">Top 3</span>
+        <h3>粉嫩星空系列</h3>
+        <p>溫柔甜美，適合約會與拍照。</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
+<section id="gallery">
+  <div class="title">
+    <h2>作品分類</h2>
+    <p>依照風格快速找到適合自己的款式。</p>
+  </div>
 
-<div class="section-title">
-💬 客人實拍
-</div>
+  <div class="grid">
+    <div class="card">
+      <img src="4.jpg" alt="甜美可愛款">
+      <div class="card-body">
+        <h3>甜美可愛款</h3>
+        <p>蝴蝶結、愛心、粉色、少女感。</p>
+      </div>
+    </div>
 
-<div class="review">
-<img src="9.jpg" style="width:100%;border-radius:12px;">
-</div>
+    <div class="card">
+      <img src="5.jpg" alt="暗黑酷感款">
+      <div class="card-body">
+        <h3>暗黑酷感款</h3>
+        <p>黑色、銀飾、十字架、酷感造型。</p>
+      </div>
+    </div>
 
+    <div class="card">
+      <img src="6.jpg" alt="日常氣質款">
+      <div class="card-body">
+        <h3>日常氣質款</h3>
+        <p>奶茶、裸色、低調但有細節。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="7.jpg" alt="現貨短甲">
+      <div class="card-body">
+        <h3>現貨短甲</h3>
+        <p>好配戴、方便生活，最適合新手。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="8.jpg" alt="市集現場">
+      <div class="card-body">
+        <h3>市集現場</h3>
+        <p>現場可挑款、看實品、確認尺寸。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="9.jpg" alt="客人實戴">
+      <div class="card-body">
+        <h3>客人實戴</h3>
+        <p>實際配戴效果，更接近日常參考。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="title">
+    <h2>購買流程</h2>
+    <p>第一次買也不用擔心，照著流程即可。</p>
+  </div>
+
+  <div class="process">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>挑款式</h3>
+      <p>從網站、IG、LINE 群或蝦皮挑選喜歡的款式。</p>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <h3>確認尺寸</h3>
+      <p>常見尺寸有 XS / S / M / L，不確定可以先詢問。</p>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <h3>付款下單</h3>
+      <p>可透過蝦皮下單，或 LINE 詢問現貨。</p>
+    </div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <h3>收到配戴</h3>
+      <p>依照教學貼上，即可快速完成美甲效果。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="title">
+    <h2>客人實戴回饋</h2>
+    <p>真實配戴效果，比商品照更有參考價值。</p>
+  </div>
+
+  <div class="review">
+    <img src="10.jpg" alt="客人回饋">
+    <div>
+      <h3>「而且貼超牢固的」</h3>
+      <p>
+        客人實戴後回饋，配戴效果自然、牢固度佳。
+        穿戴甲最重要的不是只看照片，而是戴上手後是否自然、舒服、好搭配。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="title">
+    <h2>常見問題</h2>
+  </div>
+
+  <div class="faq">
+    <div class="faq-item">
+      <h3>穿戴甲可以重複使用嗎？</h3>
+      <p>可以。若小心拆卸並妥善保存，之後可以再次配戴。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>會不會容易掉？</h3>
+      <p>使用方式會影響牢固度。正確清潔甲面、使用果凍膠或膠水，會更牢。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>第一次買不知道尺寸怎麼辦？</h3>
+      <p>可以先透過 LINE 詢問，我們會協助你選擇較適合的尺寸。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>價格為什麼比蝦皮低價賣家高？</h3>
+      <p>Shatina 主打手作設計、實品質感與售後溝通，不走最低價路線。</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cta">
+    <h2>想挑適合自己的款式？</h2>
+    <p>直接加 LINE 詢問，或到蝦皮查看現貨。</p>
+
+    <div class="buttons" style="justify-content:center">
+      <a class="btn line" href="https://line.me/" target="_blank">LINE 詢問</a>
+      <a class="btn shopee" href="https://tw.shp.ee/pP3mgWKm" target="_blank">蝦皮下單</a>
+      <a class="btn soft" href="#gallery">查看作品</a>
+    </div>
+  </div>
 </section>
 
 <footer>
-
-Shatina Press-on Nails © 2026
-
+  © 2026 Shatina Press-on Nails｜莎緹娜穿戴甲
 </footer>
 
 </body>
