@@ -19,9 +19,7 @@ img{width:100%;display:block}
 
 :root{
   --pink:#c98592;
-  --soft:#fff0ef;
   --deep:#6b4247;
-  --text:#3a2d2d;
   --muted:#8c7777;
 }
 
@@ -157,53 +155,6 @@ section{padding:78px 22px}
   box-shadow:0 18px 45px rgba(166,105,115,.12);
 }
 
-.center-btn{text-align:center;margin-top:34px}
-.btn-soft{
-  display:inline-block;
-  background:var(--pink);
-  color:white;
-  padding:13px 36px;
-  border-radius:999px;
-  font-weight:700;
-  box-shadow:0 12px 26px rgba(201,133,146,.25);
-}
-
-.best-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:26px;
-}
-.product-card{
-  background:white;
-  border-radius:26px;
-  overflow:hidden;
-  box-shadow:0 12px 32px rgba(166,105,115,.09);
-}
-.product-card img{
-  height:330px;
-  object-fit:cover;
-}
-.product-info{padding:22px}
-.badge{
-  display:inline-block;
-  background:#f6d9de;
-  color:var(--deep);
-  padding:5px 12px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:800;
-  margin-bottom:10px;
-}
-.product-info h3{
-  font-size:22px;
-  color:var(--deep);
-  margin-bottom:6px;
-}
-.product-info p{
-  color:var(--muted);
-  font-size:14px;
-}
-
 .review-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -265,6 +216,16 @@ section{padding:78px 22px}
   font-size:14px;
 }
 
+.btn-soft{
+  display:inline-block;
+  background:var(--pink);
+  color:white;
+  padding:13px 36px;
+  border-radius:999px;
+  font-weight:700;
+  box-shadow:0 12px 26px rgba(201,133,146,.25);
+}
+
 .cta{
   background:linear-gradient(135deg,#ffe8ec,#fffaf8);
   border-radius:34px;
@@ -303,7 +264,7 @@ footer{
   z-index:1000;
 }
 .float-bar a{
-  padding:14px 24px;
+  padding:14px 34px;
   border-radius:999px;
   color:white;
   font-weight:800;
@@ -312,7 +273,6 @@ footer{
 .float-line{background:#06C755}
 .float-shop{background:#ee4d2d}
 .float-ig{background:#111}
-.float-album{background:#c98592}
 
 @media(max-width:900px){
   .menu,.nav-line{display:none}
@@ -320,7 +280,7 @@ footer{
   .feature-box{grid-template-columns:repeat(2,1fr)}
   .feature-item{border-right:none;border-bottom:1px solid #f1dada}
   .about{grid-template-columns:1fr}
-  .best-grid,.review-grid{grid-template-columns:1fr}
+  .review-grid{grid-template-columns:1fr}
   .process-grid{grid-template-columns:repeat(2,1fr)}
 }
 
@@ -336,8 +296,7 @@ footer{
   .float-bar a{
     flex:1;
     text-align:center;
-    padding:14px 6px;
-    font-size:13px;
+    padding:14px 8px;
   }
 }
 </style>
@@ -357,9 +316,8 @@ footer{
 
     <div class="menu">
       <a href="#about">關於</a>
-      <a href="#best">爆款排行</a>
       <a href="#review">客人真實</a>
-      <a href="你的LINE相冊連結" target="_blank">作品分享</a>
+      <a href="#process">購買流程</a>
       <a href="#contact">關於我們</a>
     </div>
 
@@ -422,58 +380,11 @@ footer{
           <li>LINE 協助挑款與尺寸</li>
           <li>適合上班、約會、拍照與日常穿搭</li>
         </ul>
-
-        <div class="center-btn">
-          <a href="你的LINE相冊連結" class="btn-soft" target="_blank">查看作品分享</a>
-        </div>
       </div>
 
       <div class="about-img">
         <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png" alt="About Shatina">
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="best">
-  <div class="container">
-    <div class="section-title">
-      <small>BEST SELLERS</small>
-      <h2>爆款排行</h2>
-      <p>目前最受歡迎的熱門款式。</p>
-    </div>
-
-    <div class="best-grid">
-      <div class="product-card">
-        <img src="IMG_7626.jpeg">
-        <div class="product-info">
-          <span class="badge">TOP 1</span>
-          <h3>暗黑十字架系列</h3>
-          <p>個性、顯白、韓系酷感，適合黑色系與個性穿搭。</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img src="A4C884F3-9EC1-4AF3-860B-3066A2C6DA76.png">
-        <div class="product-info">
-          <span class="badge">TOP 2</span>
-          <h3>奶茶氣質系列</h3>
-          <p>低調、有質感，適合日常、上班與約會。</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img src="IMG_8587.jpeg">
-        <div class="product-info">
-          <span class="badge">TOP 3</span>
-          <h3>粉嫩甜美系列</h3>
-          <p>溫柔少女感，適合約會、拍照與第一次入手。</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="center-btn">
-      <a href="你的LINE相冊連結" class="btn-soft" target="_blank">看更多作品</a>
     </div>
   </div>
 </section>
@@ -514,7 +425,7 @@ footer{
   </div>
 </section>
 
-<section>
+<section id="process">
   <div class="container">
     <div class="section-title">
       <small>HOW TO ORDER</small>
@@ -526,7 +437,7 @@ footer{
       <div class="step">
         <div class="step-num">1</div>
         <h3>挑款式</h3>
-        <p>從作品分享、LINE 或 IG 挑選喜歡的款式。</p>
+        <p>從客人真實回饋、LINE 或 IG 挑選喜歡的款式。</p>
       </div>
 
       <div class="step">
@@ -560,7 +471,7 @@ footer{
   <div class="container">
     <div class="cta">
       <h2>找到適合自己的穿戴甲風格</h2>
-      <p>加入 LINE 詢問尺寸與現貨，或直接查看作品分享。</p>
+      <p>加入 LINE 詢問尺寸與現貨，或直接到蝦皮查看熱門款式。</p>
       <a class="btn-soft" href="https://line.me/ti/p/~64130184" target="_blank">LINE 詢問</a>
     </div>
   </div>
@@ -572,7 +483,6 @@ footer{
 
 <div class="float-bar">
   <a class="float-line" href="https://line.me/ti/p/~64130184" target="_blank">LINE</a>
-  <a class="float-album" href="你的LINE相冊連結" target="_blank">作品</a>
   <a class="float-shop" href="https://tw.shp.ee/pP3mgWKm" target="_blank">蝦皮</a>
   <a class="float-ig" href="https://instagram.com/shatina_nail" target="_blank">IG</a>
 </div>
